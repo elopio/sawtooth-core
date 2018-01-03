@@ -1,0 +1,21 @@
+name: sawtooth
+version: git
+summary: CLI for Sawtooth Distributed Ledger
+description: |
+  Hyperledger Sawtooth is an enterprise solution for building, deploying, and
+  running distributed ledgers (also called blockchains). It provides an
+  extremely modular and flexible platform for implementing transaction-based
+  updates to shared state between untrusted parties coordinated by consensus
+  algorithms.
+
+grade: devel # must be 'stable' to release into candidate/stable channels
+confinement: devmode # use 'strict' once you have the right plugs and slots
+
+apps:
+
+
+parts:
+  sawtooth-cli:
+    source: .
+    source-subdir: cli
+    plugin: python
